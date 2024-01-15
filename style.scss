@@ -1,0 +1,88 @@
+$white--color: hsl(0, 0%, 100%);
+$light-pink--color: hsl(275, 100%, 97%);
+$gray-purple--color: hsl(292, 16%, 49%);
+$dark-purple--color: hsl(292, 42%, 14%);
+$regular--font-weight: 400;
+$semibold--font-weight: 600;
+$bold--font-weight: 700;
+html {
+  font-family: "Work Sans", sans-serif;
+}
+body {
+  background-color: $light-pink--color;
+}
+header {
+  width: 100%;
+  height: 230px;
+  background: url("assets/images/background-pattern-mobile.svg");
+}
+main {
+  padding: 1.5rem;
+}
+.card {
+  position: relative;
+  top: -100px;
+  background-color: $white--color;
+  border-radius: 10px;
+  padding: 1.5rem;
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    img {
+      width: 25px;
+      margin-right: 1.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: $bold--font-weight;
+      color: $dark-purple--color;
+    }
+  }
+}
+.accordion {
+  &__item {
+    &__header, &__body {
+      line-height: 1.2;
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        width: 80%;
+        font-weight: $semibold--font-weight;
+        color: $dark-purple--color;
+      }
+      svg {
+        path {
+          transition: fill 0.5s ease-out;
+        }
+        &:hover {
+          cursor: pointer;
+          path {
+            fill: $dark-purple--color;
+          }
+        }
+      }
+    }
+    &__body {
+      margin-top: 1.5rem;
+      color: $gray-purple--color; 
+    }
+    hr {
+      color: hsla(276, 100%, 97.1%, 0.18);
+      margin: 1.5rem 0;
+    }
+  }
+}
+.d-none {
+  display: none;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
