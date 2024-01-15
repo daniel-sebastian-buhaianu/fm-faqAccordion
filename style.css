@@ -12,11 +12,13 @@ header {
   background: url("assets/images/background-pattern-mobile.svg");
 }
 
-main {
-  padding: 1.5rem;
+@media (min-width: 660px) {
+  header {
+    height: 320px;
+    background: url("assets/images/background-pattern-desktop.svg");
+  }
 }
-
-footer {
+main {
   padding: 1.5rem;
 }
 
@@ -32,62 +34,71 @@ footer {
   align-items: center;
   margin-bottom: 1.5rem;
 }
-.card__header img {
+.card__header .icon {
   width: 25px;
   margin-right: 1.5rem;
 }
-.card__header h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: hsl(292, 42%, 14%);
-}
 
-.accordion__item__header, .accordion__item__body {
-  line-height: 1.2;
+@media (min-width: 660px) {
+  .card {
+    width: 564px;
+    margin: 0 auto;
+    top: -150px;
+  }
 }
-.accordion__item__header {
+.accordion__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.accordion__item__header h2 {
-  width: 80%;
-  font-weight: 600;
-  color: hsl(292, 42%, 14%);
+.accordion__header .icon {
+  margin-left: 1.5rem;
 }
-.accordion__item__header svg path {
-  transition: fill 0.5s ease-out;
-}
-.accordion__item__header svg:hover {
+.accordion__header:hover {
   cursor: pointer;
 }
-.accordion__item__header svg:hover path {
-  fill: hsl(292, 42%, 14%);
+.accordion__header:hover .subtitle {
+  color: #AD28EB;
 }
-.accordion__item__body {
+.accordion__body {
   margin-top: 1.5rem;
   color: hsl(292, 16%, 49%);
+  line-height: 1.3;
 }
-.accordion__item hr {
-  color: hsla(276, 100%, 97.1%, 0.18);
+.accordion__body--hidden {
+  display: none;
+}
+.accordion__separator {
   margin: 1.5rem 0;
+  color: hsla(276, 100%, 97.1%, 0.18);
 }
 
-.d-none {
-  display: none;
+.title, .subtitle {
+  color: hsl(292, 42%, 14%);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .icon {
   width: 30px;
   height: 31px;
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.icon--star {
+  content: url(assets/images/icon-star.svg);
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.icon--minus {
+  content: url(assets/images/icon-minus.svg);
+}
+.icon--plus {
+  content: url(assets/images/icon-plus.svg);
 }
 
 /*# sourceMappingURL=style.css.map */
