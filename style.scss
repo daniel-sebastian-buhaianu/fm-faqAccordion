@@ -19,6 +19,9 @@ header {
 main {
   padding: 1.5rem;
 }
+footer {
+  padding: 1.5rem;
+}
 .card {
   position: relative;
   top: -100px;
@@ -78,6 +81,10 @@ main {
 }
 .d-none {
   display: none;
+}
+.icon {
+  width: 30px;
+  height: 31px;
 }
 .attribution {
   font-size: 11px;
